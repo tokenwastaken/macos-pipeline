@@ -1,6 +1,6 @@
 pipeline {
 
-}
+
     stages {
 
             stage('Build') {
