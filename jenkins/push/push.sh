@@ -21,3 +21,5 @@ docker push wizzyy/$IMAGE:$BUILD_TAG
 echo $IMAGE > /tmp/.auth
 echo $BUILD_TAG >> /tmp/.auth
 scp /tmp/.auth iskender@192.168.0.16:/Users/iskender/Desktop/pipeline/jenkins/push/auth
+ssh iskender@192.168.0.16 '/var/jenkins_home/workspace/macos-pipeline/jenkins/push/push-k8s.sh'
+
