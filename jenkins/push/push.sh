@@ -18,8 +18,12 @@ echo "Pushing image"
 
 docker push wizzyy/$IMAGE:$BUILD_TAG
 
+USER=
+IP=
+
+#Deployment part
 echo $IMAGE > /tmp/.auth
 echo $BUILD_TAG >> /tmp/.auth
-scp /tmp/.auth iskender@192.168.0.16:/Users/iskender/Desktop/pipeline/jenkins/push/auth
-ssh iskender@192.168.0.16 '/Users/iskender/Desktop/pipeline/jenkins/push/push-k8s.sh'
+scp /tmp/.auth $USER@$IP:/Users/iskender/Desktop/pipeline/jenkins/push/auth
+ssh $USER@$IP '/Users/iskender/Desktop/pipeline/jenkins/push/push-k8s.sh'
 
