@@ -19,10 +19,11 @@ pipeline {
                     sh './jenkins/test/mvn.sh mvn test'
                 }
     }
-}
+
             stage('Push') {
                 steps {
                     sh './jenkins/push/push.sh'
                 }
             }
+}
 }
