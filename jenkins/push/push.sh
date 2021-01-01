@@ -4,7 +4,7 @@ echo "*********"
 echo pushing
 echo "*********"
 
-IMAGE="mavenprojectMACOS"
+IMAGE="mavenproject-macos"
 
 echo logging in 
 
