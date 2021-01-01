@@ -1,7 +1,9 @@
 pipeline {
 
     agent any
-
+    environment{
+       PASS = credentials('dockerhub-pass')
+}
     stages {
 
             stage('Build') {
@@ -18,4 +20,9 @@ pipeline {
                 }
     }
 }
+            stage('Push') {
+                steps {
+                    sh './jenkins/push/push.sh'
+                }
+            }
 }
