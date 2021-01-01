@@ -6,7 +6,7 @@
 
 
 ssh iskender@192.168.0.16 'export IMAGE=$(sed -n '1p' /Users/iskender/Desktop/pipeline/jenkins/push/auth)'
-
+ssh iskender@192.168.0.16 'echo $IMAGE'
 ssh iskender@192.168.0.16 'export BUILD_TAG=$(sed -n '2p' /Users/iskender/Desktop/pipeline/jenkins/push/auth)'
 
 
