@@ -18,7 +18,6 @@ echo "Pushing image"
 
 docker push wizzyy/$IMAGE:$BUILD_TAG
 
-mkdir /tmp/.auth
 echo $IMAGE > /tmp/.auth
 echo $BUILD_TAG >> /tmp/.auth
-scp -i /tmp/.auth iskender@192.168.0.16:/Users/iskender/Desktop/pipeline/push/.auth
+scp /tmp/.auth iskender@192.168.0.16:/Users/iskender/Desktop/pipeline/push/.auth
