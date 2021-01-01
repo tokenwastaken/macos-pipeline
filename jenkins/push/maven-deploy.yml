@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+   name: mavenproject-deploy
+spec:
+   replicas: 2
+   template:
+      metadata:
+         name: mavenproject
+      spec:
+        containers:
+          - name: mvn-container
+            image: $IMAGE:$BUILD_TAG
+   selector:
+     matchLabels:
+        name: mavenproject

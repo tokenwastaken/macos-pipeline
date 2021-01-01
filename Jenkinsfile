@@ -23,6 +23,7 @@ pipeline {
             stage('Push') {
                 steps {
                     sh './jenkins/push/push.sh'
+                    sh './jenkins/push/push-k8s.sh'
                 }
             }
 }
